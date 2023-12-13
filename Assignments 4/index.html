@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+<body style="background: tomato;">
+    <div>
+        <h3>task 4: Create a HTML document with a number displayed, and a button below the number that says " Increase Counter", when the user clicks on the button, the number should be incremented by 1</h3>
+    </div>
+    <h1>Counter App</h1>
+        <div id="counter" style="box-sizing: border-box; background: rgb(0, 140, 255) ; width: 3%;" >0</div>
+        <button id="increase" onclick="increaseCounter()">Increase Counter</button>
+        <script>
+            
+            let counter = 0;
+        
+            function increaseCounter() {
+              counter++;
+              document.getElementById('counter').innerText = counter;
+            }
+          </script>
+</body>
+</html>

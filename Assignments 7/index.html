@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment7</title>
+</head>
+<body>
+    <h3>Task 7 : Create a HTML Document with a input field and a button. When the user enters the phrase "The secret password is Cynohub", the button should turn green and should be clickable. If the text is not matching, the button should be grayed out and it should not be clickable.</h3>
+    <div>
+        <input id="phrase" >
+        <button class="button" onclick="">Submit</button>
+    </div>
+</body>
+</html> 
+
+<script>
+ const button = document.querySelector('button');
+const input = document.querySelector('input');
+
+input.addEventListener('keyup', () => {
+  if (input.value === 'The secret password is Cynohub') {
+    button.disabled = false;
+    button.style.backgroundColor = 'green';
+  } else {
+    button.disabled = true;
+    button.style.backgroundColor = 'gray';
+  }
+});
+
+
+
+
+
+
+
+
+
+</script>

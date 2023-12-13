@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment8</title>
+</head>
+<body>
+    <h3>Task 8 : Create a HTML document containing a form and color options below the form, whenever the user clicks on a color below the form, the background color of the form should change, like shown in the above images.</h3>
+    <br>
+    <form class="Ball" style="border: 1px solid black; width: 35%; height: 400px; padding: 50px;">
+        <div id="name">
+            Name : <input type="text" name="name" placeholder="Enter Your name*" required>
+        </div><br>
+        <div id="dob">
+            Date-of-birth : <input type="date" name="Dob" required >
+        </div><br>
+        <div id="email">
+           E-mail : <input type="email" name="email" placeholder="Enter Your email*" required >
+        </div><br>
+        <div id="phone">
+           Phone : <input type="number" name="phone" placeholder="Enter Your number*" required>
+        </div><br>
+        <div id="password">
+            Password : <input type="password" name="password" placeholder="Enter Your password*" required>
+        </div><br>
+        <div id="c-password">
+            Confirm Password : <input type="password" name="c-password" placeholder="Enter Your password again*" required>
+        </div><br>
+        <button type="submit">SUBMIT</button>
+        <br><br>
+        <strong>Select background colour</strong>
+        <select onchange="color(this.value)">
+            <option>Colours</option>
+            <option  value="Red">Red</option>
+            <option  value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Orange">Orange</option>
+            <option value="Blue">Blue</option>
+        </select>
+    
+    </form>
+    
+
+</body>
+</html>
+<script>
+       function color(value){
+        // document.body.style.backgroundColor=value;
+   
+    let final = document.querySelector('form')
+    final.style.backgroundColor=value
+       }
+
+    
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment6</title>
+</head>
+<body>
+    <h3>Task 6 : Create a HTML document to add a image and add 2 buttons below the image. When the user clicks on Next Image & previous image the images should cycle through 3 pre-set images.</h3>
+    <div class="slider">
+        <div class="img-box">
+            <img src="./images/images1.JPG" class="slider-img">
+        </div>
+    
+
+    <button class="btn" onclick="prev()">Previous</button>
+    <button class="btn" onclick="next()">Next</button>
+</div>
+</body>
+<style>
+    .slider-img {
+      width: auto;
+      height: 550px;
+    }
+</style>
+<script>
+    let slider_img = document.querySelector('.slider-img')
+
+    let images = ['images1.jpg','images2.jpg','images3.jpg'];
+    let i = 0;
+    function prev(){
+        if (i <= 0) i = images.length;
+        i--;
+        return setImg();
+    }
+    function next(){
+        if (i >= images.length - 1) i = -1;
+        i++;
+        return setImg();
+    }
+
+    function setImg(){
+        return slider_img.setAttribute('src','images/'+ images[i]);
+    }
+
+</script>
+</html>

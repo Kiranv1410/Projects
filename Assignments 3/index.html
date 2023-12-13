@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+<body>
+    <div>
+        <h3>Create a HTML Document with a image and a button below the image that shays " Show Element.", the image should initially be hidden, only when the user clicks the button, the image should be visible..</h3>
+    </div>
+    <img src="https://images.pexels.com/photos/349732/pexels-photo-349732.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" width="500" height="450" id="photo" style="display: none;" >
+    
+    <div>
+      <button onclick="Task4()" >Show Element</button>
+    </div>
+    <script>
+         function Task4() {
+            var image = document.getElementById("photo");
+            if (image) {
+                image.style.display = "block";
+            } else {
+                alert("Image not found!");
+            }
+        }
+    </script>
+</body>
+</html>
